@@ -1,0 +1,18 @@
+
+{
+  "layer": "top",
+  "modules-left": ["clock", "cpu", "memory"],
+  "modules-center": [],
+  "modules-right": ["custom/updates", "custom/weather", "pulseaudio", "tray"],
+  "custom/updates": {
+    "exec": "checkupdates | wc -l",
+    "interval": 600,
+    "format": "{} updates",
+    "tooltip": false
+  },
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "interval": 900,
+    "format": "{}"
+  }
+}
